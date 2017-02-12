@@ -57,7 +57,7 @@ class App extends Component {
                 <footer className="page-footer">
                     <form className="col s12" onSubmit={this.handleSubmit.bind(this)} >
                     <div className="row">
-                        <div className="input-field col s8">
+                        <div className="input-field col s8 chat">
                             <input
                                 type="text"
                                 ref="textInput"
