@@ -27,6 +27,7 @@ class App extends Component {
         ReactDOM.findDOMNode(this.refs.textInput).value = '';
     }
 
+   
     renderMessages() {
         return this.props.messages.map((message) => (
             <Message key={message._id} message={message} />
@@ -48,27 +49,27 @@ class App extends Component {
                     </nav>
                 </div>
                 <main>
-                <ul className="collection">
-                    {this.renderMessages()}
-                </ul>
+                    <ul className="collection" id='messageList'>
+                        {this.renderMessages()}
+                    </ul>
 
-                
+
                 </main>
                 <footer className="page-footer">
                     <form className="col s12" onSubmit={this.handleSubmit.bind(this)} >
-                    <div className="row">
-                        <div className="input-field col s8 chat">
-                            <input
-                                type="text"
-                                ref="textInput"
-                                placeholder="message"
-                            />
+                        <div className="row">
+                            <div className="input-field col s8 chat">
+                                <input
+                                    type="text"
+                                    ref="textInput"
+                                    placeholder="Type your message here!"
+                                />
+                            </div>
+                            <div className="col s3">
+                                <button className="btn waves-effect waves-light" style={{ 'marginTop': '1rem' }} type="submit" name="action">Submit</button>
+                            </div>
                         </div>
-                        <div className="col s3">
-                            <button className="btn waves-effect waves-light" style={{ 'marginTop': '1rem' }} type="submit" name="action">Submit</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
                 </footer>
 
             </div>

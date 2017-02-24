@@ -138,10 +138,11 @@ header .hide-completed {
   footer.page-footer {
    position:fixed;
    bottom:0px;
-   height:80px;
+   
    width:inherit;
    margin-left: auto;
    margin-right: auto;
+   background-color: rgb(199, 225, 229);
   }
    .navbar-fixed{
        width: inherit;
@@ -151,9 +152,28 @@ header .hide-completed {
    }
 
    main{
-    margin-bottom: 80px;
+    margin-bottom: 112px;
    }
 
-   .chat{
-       margin-left: 50px
+   .input-field.col.s8.chat{
+       margin-left: 0.75rem;
    }
+
+   ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #ee6e73;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #ee6e73;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ee6e73;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #ee6e73;
+}
+
+div.container {
+    width: 100%
+}
